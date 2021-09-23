@@ -92,6 +92,11 @@ textarea {
     background-image: -moz-linear-gradient(center top, #fff, #ccc);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
   }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(118, 109, 244, 0.22);
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
