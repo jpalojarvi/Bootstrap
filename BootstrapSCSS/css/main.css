@@ -86,7 +86,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+   body {
+    background-color: #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#ccc);
+    background-image: -moz-linear-gradient(center top, #fff, #ccc);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
