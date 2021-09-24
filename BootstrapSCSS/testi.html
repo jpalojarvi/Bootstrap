@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" dir="">
+
+<head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Corporate | Space - Multipurpose Responsive Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/bs-custom.css" rel="stylesheet">
+
+    <style class="fslightbox-styles">
+        .fslightbox-absoluted {
+            position: absolute;
+            top: 0;
+            left: 0
+        }
+
+        .fslightbox-fade-in {
+            animation: fslightbox-fade-in .3s cubic-bezier(0, 0, .7, 1)
+        }
+
+        .fslightbox-fade-out {
+            animation: fslightbox-fade-out .3s ease
+        }
+
+        .fslightbox-fade-in-strong {
+            animation: fslightbox-fade-in-strong .3s cubic-bezier(0, 0, .7, 1)
+        }
+
+        .fslightbox-fade-out-strong {
+            animation: fslightbox-fade-out-strong .3s ease
+        }
+
+        @keyframes fslightbox-fade-in {
+            from {
+                opacity: .65
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fslightbox-fade-out {
+            from {
+                opacity: .35
+            }
+
+            to {
+                opacity: 0
+            }
+        }
+
+        @keyframes fslightbox-fade-in-strong {
+            from {
+                opacity: .3
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fslightbox-fade-out-strong {
+            from {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0
+            }
+        }
+
+        .fslightbox-cursor-grabbing {
+            cursor: grabbing
+        }
+
+        .fslightbox-full-dimension {
+            width: 100%;
+            height: 100%
+        }
+
+        .fslightbox-open {
+            overflow: hidden;
+            height: 100%
+        }
+
+        .fslightbox-flex-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .fslightbox-opacity-0 {
+            opacity: 0 !important
+        }
+
+        .fslightbox-opacity-1 {
+            opacity: 1 !important
+        }
+
+        .fslightbox-scrollbarfix {
+            padding-right: 17px
+        }
+
+        .fslightbox-transform-transition {
+            transition: transform .3s
+        }
+
+        .fslightbox-container {
+            font-family: Arial, sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(rgba(30, 30, 30, .9), #000 1810%);
+            touch-action: none;
+            z-index: 1000000000;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .fslightbox-container * {
+            box-sizing: border-box
+        }
+
+        .fslightbox-svg-path {
+            transition: fill .15s ease;
+            fill: #ddd
+        }
+
+        .fslightbox-nav {
+            height: 45px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0
+        }
+
+        .fslightbox-slide-number-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            font-size: 15px;
+            color: #d7d7d7;
+            z-index: 0;
+            max-width: 55px;
+            text-align: left
+        }
+
+        .fslightbox-slide-number-container .fslightbox-flex-centered {
+            height: 100%
+        }
+
+        .fslightbox-slash {
+            display: block;
+            margin: 0 5px;
+            width: 1px;
+            height: 12px;
+            transform: rotate(15deg);
+            background: #fff
+        }
+
+        .fslightbox-toolbar {
+            position: absolute;
+            z-index: 3;
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            background: rgba(35, 35, 35, .65)
+        }
+
+        .fslightbox-toolbar-button {
+            height: 100%;
+            width: 45px;
+            cursor: pointer
+        }
+
+        .fslightbox-toolbar-button:hover .fslightbox-svg-path {
+            fill: #fff
+        }
+
+        .fslightbox-slide-btn-container {
+            display: flex;
+            align-items: center;
+            padding: 12px 12px 12px 6px;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            z-index: 3;
+            transform: translateY(-50%)
+        }
+
+        @media (min-width:476px) {
+            .fslightbox-slide-btn-container {
+                padding: 22px 22px 22px 6px
+            }
+        }
+
+        @media (min-width:768px) {
+            .fslightbox-slide-btn-container {
+                padding: 30px 30px 30px 6px
+            }
+        }
+
+        .fslightbox-slide-btn-container:hover .fslightbox-svg-path {
+            fill: #f1f1f1
+        }
+
+        .fslightbox-slide-btn {
+            padding: 9px;
+            font-size: 26px;
+            background: rgba(35, 35, 35, .65)
+        }
+
+        @media (min-width:768px) {
+            .fslightbox-slide-btn {
+                padding: 10px
+            }
+        }
+
+        @media (min-width:1600px) {
+            .fslightbox-slide-btn {
+                padding: 11px
+            }
+        }
+
+        .fslightbox-slide-btn-container-previous {
+            left: 0
+        }
+
+        @media (max-width:475.99px) {
+            .fslightbox-slide-btn-container-previous {
+                padding-left: 3px
+            }
+        }
+
+        .fslightbox-slide-btn-container-next {
+            right: 0;
+            padding-left: 12px;
+            padding-right: 3px
+        }
+
+        @media (min-width:476px) {
+            .fslightbox-slide-btn-container-next {
+                padding-left: 22px
+            }
+        }
+
+        @media (min-width:768px) {
+            .fslightbox-slide-btn-container-next {
+                padding-left: 30px
+            }
+        }
+
+        @media (min-width:476px) {
+            .fslightbox-slide-btn-container-next {
+                padding-right: 6px
+            }
+        }
+
+        .fslightbox-down-event-detector {
+            position: absolute;
+            z-index: 1
+        }
+
+        .fslightbox-slide-swiping-hoverer {
+            z-index: 4
+        }
+
+        .fslightbox-invalid-file-wrapper {
+            font-size: 22px;
+            color: #eaebeb;
+            margin: auto
+        }
+
+        .fslightbox-video {
+            object-fit: cover
+        }
+
+        .fslightbox-youtube-iframe {
+            border: 0
+        }
+
+        .fslightbox-loader {
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 67px;
+            height: 67px
+        }
+
+        .fslightbox-loader div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 54px;
+            height: 54px;
+            margin: 6px;
+            border: 5px solid;
+            border-color: #999 transparent transparent transparent;
+            border-radius: 50%;
+            animation: fslightbox-loader 1.2s cubic-bezier(.5, 0, .5, 1) infinite
+        }
+
+        .fslightbox-loader div:nth-child(1) {
+            animation-delay: -.45s
+        }
+
+        .fslightbox-loader div:nth-child(2) {
+            animation-delay: -.3s
+        }
+
+        .fslightbox-loader div:nth-child(3) {
+            animation-delay: -.15s
+        }
+
+        @keyframes fslightbox-loader {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .fslightbox-source {
+            position: relative;
+            z-index: 2;
+            opacity: 0
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+
+<body>
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="navbar navbar-expand-lg navbar-light navbar-right bg-white">
+        <div class="container">
+            <nav class="js-mega-menu navbar-nav-wrap hs-menu-initialized hs-menu-horizontal">
+                <!-- Default Logo -->
+                <a class="navbar-brand" href="./index.html" aria-label="Space">
+                    <img class="navbar-brand-logo" src="http://placekitten.com/100/100" alt="Image Description">
+                </a>
+                <!-- End Default Logo -->
+
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-default">
+                        <i class="bi-list"></i>
+                    </span>
+                    <span class="navbar-toggler-toggled">
+                        <i class="bi-x"></i>
+                    </span>
+                </button>
+                <!-- End Toggler -->
+
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <!-- Landings -->
+                        <li class="hs-has-mega-menu nav-item" data-hs-mega-menu-item-options="{
+                    &quot;desktop&quot;: {
+                      &quot;maxWidth&quot;: &quot;30rem&quot;
+                    }
+                  }">
+                            <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle active"
+                                aria-current="page" href="#" role="button" aria-expanded="false">Landings</a>
+
+                            <!-- Mega Menu -->
+                            <div class="hs-mega-menu hs-position-right-fix dropdown-menu hs-mega-menu-desktop-lg"
+                                aria-labelledby="landingsMegaMenu"
+                                style="min-width: 30rem; max-width: 30rem; display: none;">
+                                <!-- Main Content -->
+                                <div class="navbar-dropdown-menu-inner">
+                                    <div class="row">
+                                        <div class="col-sm mb-3 mb-sm-0">
+                                            <span class="dropdown-header">Classic</span>
+                                            <a class="dropdown-item active" href="./index.html">Corporate</a>
+                                            <a class="dropdown-item " href="./landing-agency.html">Agency</a>
+                                            <a class="dropdown-item " href="./landing-consulting.html">Consulting</a>
+                                            <a class="dropdown-item " href="./landing-services.html">Services</a>
+                                            <a class="dropdown-item " href="./landing-business.html">Business</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <span class="dropdown-header">Services</span>
+                                            <a class="dropdown-item " href="./landing-services-growth.html">Growth</a>
+                                            <a class="dropdown-item " href="./landing-services-saas.html">SaaS</a>
+                                            <a class="dropdown-item " href="./landing-services-wallet.html">Wallet</a>
+                                            <a class="dropdown-item " href="./landing-services-api.html">API</a>
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                </div>
+                                <!-- End Main Content -->
+                            </div>
+                            <!-- End Mega Menu -->
+                        </li>
+                        <!-- End Landings -->
+
+                        <!-- Pages -->
+                        <li class="hs-has-mega-menu nav-item">
+                            <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"
+                                role="button" aria-expanded="false">Pages</a>
+
+                            <!-- Mega Menu -->
+                            <div class="hs-mega-menu hs-position-right dropdown-menu w-100 hs-mega-menu-desktop-lg fadeOut"
+                                aria-labelledby="pagesMegaMenu" style="min-width: 42rem; display: none;">
+                                <!-- Main Content -->
+                                <div class="navbar-dropdown-menu-inner">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-3">
+                                            <span class="dropdown-header">Company</span>
+                                            <a class="dropdown-item " href="./page-about.html">About</a>
+                                            <a class="dropdown-item " href="./page-services.html">Services</a>
+                                            <a class="dropdown-item " href="./page-customer-stories.html">Customer
+                                                Stories</a>
+                                            <a class="dropdown-item " href="./page-customer-story.html">Customer
+                                                Story</a>
+                                            <a class="dropdown-item " href="./page-help-center.html">Help Center</a>
+                                            <a class="dropdown-item " href="./page-help-center-categories.html">Help
+                                                Center: Categories</a>
+                                            <a class="dropdown-item " href="./page-help-center-article.html">Help
+                                                Center: Article</a>
+                                        </div>
+
+                                        <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                                            <span class="dropdown-header invisible">Company</span>
+                                            <a class="dropdown-item " href="./page-careers.html">Careers</a>
+                                            <a class="dropdown-item " href="./page-careers-overview.html">Careers:
+                                                Overview</a>
+                                            <a class="dropdown-item " href="./page-hire-us.html">Hire Us</a>
+                                            <a class="dropdown-item " href="./page-contacts.html">Contacts</a>
+                                            <a class="dropdown-item " href="./page-login.html">Log In</a>
+                                            <a class="dropdown-item " href="./page-signup.html">Sign Up</a>
+                                            <a class="dropdown-item " href="./page-reset-password.html">Forgot
+                                                Password</a>
+                                        </div>
+
+                                        <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                                            <span class="dropdown-header">Portfolio</span>
+                                            <a class="dropdown-item " href="./portfolio-modern.html">Modern</a>
+                                            <a class="dropdown-item " href="./portfolio-classic.html">Classic</a>
+                                            <a class="dropdown-item " href="./portfolio-case-study.html">Case Study</a>
+                                        </div>
+
+                                        <div class="col-sm-6 col-md-3">
+                                            <span class="dropdown-header">Specialty pages</span>
+                                            <a class="dropdown-item " href="./page-pricing.html">Pricing</a>
+                                            <a class="dropdown-item " href="./page-coming-soon.html">Coming Soon</a>
+                                            <a class="dropdown-item " href="./page-error-404.html">Error 404</a>
+                                            <a class="dropdown-item " href="./page-terms.html">Terms &amp;
+                                                Conditions</a>
+                                            <a class="dropdown-item " href="./page-privacy.html">Privacy &amp;
+                                                Policy</a>
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                </div>
+                                <!-- End Main Content -->
+                            </div>
+                            <!-- End Mega Menu -->
+                        </li>
+                        <!-- End Pages -->
+
+                        <!-- Blog -->
+                        <li class="hs-has-sub-menu nav-item">
+                            <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"
+                                role="button" aria-expanded="false">Blog</a>
+
+                            <!-- Mega Menu -->
+                            <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg" aria-labelledby="blogMegaMenu"
+                                style="min-width: 12rem; display: none;">
+                                <a class="dropdown-item " href="./blog-classic.html">Classic</a>
+                                <a class="dropdown-item " href="./blog-article.html">Article</a>
+                                <a class="dropdown-item " href="./blog-author-profile.html">Author Profile</a>
+                            </div>
+                            <!-- End Mega Menu -->
+                        </li>
+                        <!-- End Blog -->
+
+                        <!-- Docs -->
+                        <li class="hs-has-mega-menu nav-item" data-hs-mega-menu-item-options="{
+                    &quot;desktop&quot;: {
+                      &quot;maxWidth&quot;: &quot;20rem&quot;
+                    }
+                  }">
+                            <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"
+                                role="button" aria-expanded="false">Docs</a>
+
+                            <!-- Mega Menu -->
+                            <div class="hs-mega-menu hs-position-right dropdown-menu hs-mega-menu-desktop-lg"
+                                aria-labelledby="docsMegaMenu"
+                                style="min-width: 20rem; max-width: 20rem; display: none;">
+                                <!-- Link -->
+                                <a class="navbar-dropdown-menu-media-link" href="./documentation/index.html">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <span class="svg-icon svg-icon-sm text-primary">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M4.85714 1H11.7364C12.0911 1 12.4343 1.12568 12.7051 1.35474L17.4687 5.38394C17.8057 5.66895 18 6.08788 18 6.5292V19.0833C18 20.8739 17.9796 21 16.1429 21H4.85714C3.02045 21 3 20.8739 3 19.0833V2.91667C3 1.12612 3.02045 1 4.85714 1ZM7 13C7 12.4477 7.44772 12 8 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H8C7.44772 14 7 13.5523 7 13ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H11C11.5523 18 12 17.5523 12 17C12 16.4477 11.5523 16 11 16H8Z"
+                                                        fill="#035A4B"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M6.85714 3H14.7364C15.0911 3 15.4343 3.12568 15.7051 3.35474L20.4687 7.38394C20.8057 7.66895 21 8.08788 21 8.5292V21.0833C21 22.8739 20.9796 23 19.1429 23H6.85714C5.02045 23 5 22.8739 5 21.0833V4.91667C5 3.12612 5.02045 3 6.85714 3ZM7 13C7 12.4477 7.44772 12 8 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H8C7.44772 14 7 13.5523 7 13ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H11C11.5523 18 12 17.5523 12 17C12 16.4477 11.5523 16 11 16H8Z"
+                                                        fill="#035A4B"></path>
+                                                </svg>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 ms-3">
+                                            <span class="navbar-dropdown-menu-media-title">Documentation <span
+                                                    class="badge bg-primary rounded-pill ms-1">v2.0</span></span>
+                                            <p class="navbar-dropdown-menu-media-desc">Development guides for building
+                                                projects with Space</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Link -->
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- Link -->
+                                <a class="navbar-dropdown-menu-media-link" href="./snippets/index.html">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <span class="svg-icon svg-icon-sm text-primary">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.3"
+                                                        d="M21 2H13C12.4 2 12 2.4 12 3V13C12 13.6 12.4 14 13 14H21C21.6 14 22 13.6 22 13V3C22 2.4 21.6 2 21 2ZM15.7 8L14 10.1V5.80005L15.7 8ZM15.1 4H18.9L17 6.40002L15.1 4ZM17 9.59998L18.9 12H15.1L17 9.59998ZM18.3 8L20 5.90002V10.2L18.3 8ZM9 2H3C2.4 2 2 2.4 2 3V21C2 21.6 2.4 22 3 22H9C9.6 22 10 21.6 10 21V3C10 2.4 9.6 2 9 2ZM4.89999 12L4 14.8V9.09998L4.89999 12ZM4.39999 4H7.60001L6 8.80005L4.39999 4ZM6 15.2L7.60001 20H4.39999L6 15.2ZM7.10001 12L8 9.19995V14.9L7.10001 12Z"
+                                                        fill="#035A4B"></path>
+                                                    <path
+                                                        d="M21 18H13C12.4 18 12 17.6 12 17C12 16.4 12.4 16 13 16H21C21.6 16 22 16.4 22 17C22 17.6 21.6 18 21 18ZM19 21C19 20.4 18.6 20 18 20H13C12.4 20 12 20.4 12 21C12 21.6 12.4 22 13 22H18C18.6 22 19 21.6 19 21Z"
+                                                        fill="#035A4B"></path>
+                                                </svg>
+
+                                            </span>
+                                        </div>
+
+                                        <div class="flex-grow-1 ms-3">
+                                            <span class="navbar-dropdown-menu-media-title">Snippets</span>
+                                            <p class="navbar-dropdown-menu-media-desc">Move quickly with
+                                                copy-to-clipboard feature</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- End Link -->
+                            </div>
+                            <!-- End Mega Menu -->
+                        </li>
+                        <!-- End Docs -->
+
+                        <li class="nav-divider"></li>
+
+                        <!-- Log in -->
+                        <li class="nav-item">
+                            <a class="js-animation-link btn btn-ghost-secondary btn-no-focus me-2 me-lg-0"
+                                href="javascript:;" role="button" data-bs-toggle="modal" data-bs-target="#signupModal"
+                                data-hs-show-animation-options="{
+                           &quot;targetSelector&quot;: &quot;#signupModalFormLogin&quot;,
+                           &quot;groupName&quot;: &quot;idForm&quot;
+                         }" data-hs-show-animation-link-group="idForm">Log in</a>
+
+                            <a class="js-animation-link d-lg-none btn btn-primary" href="javascript:;" role="button"
+                                data-bs-toggle="modal" data-bs-target="#signupModal" data-hs-show-animation-options="{
+                           &quot;targetSelector&quot;: &quot;#signupModalFormSignup&quot;,
+                           &quot;groupName&quot;: &quot;idForm&quot;
+                         }" data-hs-show-animation-link-group="idForm">
+                                <i class="bi-person-circle me-1"></i> Sign up
+                            </a>
+                        </li>
+                        <!-- End Log in -->
+
+                        <!-- Sign up -->
+                        <li class="nav-item">
+                            <a class="js-animation-link d-none d-lg-inline-block btn btn-primary" href="javascript:;"
+                                role="button" data-bs-toggle="modal" data-bs-target="#signupModal"
+                                data-hs-show-animation-options="{
+                           &quot;targetSelector&quot;: &quot;#signupModalFormSignup&quot;,
+                           &quot;groupName&quot;: &quot;idForm&quot;
+                         }" data-hs-show-animation-link-group="idForm">
+                                <i class="bi-person-circle me-1"></i> Sign up
+                            </a>
+                        </li>
+                        <!-- End Sign up -->
+                    </ul>
+                </div>
+                <!-- End Collapse -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main">
+        <!-- Hero -->
+        <div class="bg-primary-dark position-relative overflow-hidden">
+            <div class="container content-space-2">
+                <div class="row justify-content-center align-items-lg-center">
+                    <div class="col-md-8 col-lg-6 mb-7 mb-lg-0">
+                        <!-- Heading -->
+                        <div class="pe-lg-3 mb-7">
+                            <h1 class="display-3 text-white mb-3 mb-md-5">Solving problems for every
+                                <span class="text-warning">
+                                    <span class="js-typedjs" data-hs-typed-options="{
+                            &quot;strings&quot;: [&quot;team.&quot;, &quot;startup.&quot;, &quot;business.&quot;],
+                            &quot;typeSpeed&quot;: 90,
+                            &quot;loop&quot;: true,
+                            &quot;backSpeed&quot;: 30,
+                            &quot;backDelay&quot;: 2500
+                          }">business.</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+                                </span>
+                            </h1>
+                            <p class="lead text-white-70">Built on standard web technology, teams use Space to build
+                                beautiful cross-platform hybrid apps in a fraction of the time.</p>
+                        </div>
+                        <!-- End Heading -->
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <!-- Info Block -->
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <span class="svg-icon text-white">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M22.1671 18.1421C22.4827 18.4577 23.0222 18.2331 23.0206 17.7868L23.0039 13.1053V5.52632C23.0039 4.13107 21.8729 3 20.4776 3H8.68815C7.2929 3 6.16183 4.13107 6.16183 5.52632V9H13C14.6568 9 16 10.3431 16 12V15.6316H19.6565L22.1671 18.1421Z"
+                                                    fill="#035A4B"></path>
+                                                <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M1.98508 18V13C1.98508 11.8954 2.88051 11 3.98508 11H11.9851C13.0896 11 13.9851 11.8954 13.9851 13V18C13.9851 19.1046 13.0896 20 11.9851 20H4.10081L2.85695 21.1905C2.53895 21.4949 2.01123 21.2695 2.01123 20.8293V18.3243C1.99402 18.2187 1.98508 18.1104 1.98508 18ZM5.99999 14.5C5.99999 14.2239 6.22385 14 6.49999 14H11.5C11.7761 14 12 14.2239 12 14.5C12 14.7761 11.7761 15 11.5 15H6.49999C6.22385 15 5.99999 14.7761 5.99999 14.5ZM9.49999 16C9.22385 16 8.99999 16.2239 8.99999 16.5C8.99999 16.7761 9.22385 17 9.49999 17H11.5C11.7761 17 12 16.7761 12 16.5C12 16.2239 11.7761 16 11.5 16H9.49999Z"
+                                                    fill="#035A4B"></path>
+                                            </svg>
+
+                                        </span>
+                                    </div>
+
+                                    <div class="flex-grow-1 ms-4">
+                                        <h6 class="text-white mb-0">24 hours</h6>
+                                        <p class="text-white-70">Response time</p>
+                                    </div>
+                                </div>
+                                <!-- End Info Block -->
+                            </div>
+                            <!-- End Col -->
+
+                            <div class="col-sm-6">
+                                <!-- Info Block -->
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <span class="svg-icon text-white">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3"
+                                                    d="M4.875 20.75C4.63542 20.75 4.39583 20.6542 4.20417 20.4625L2.2875 18.5458C1.90417 18.1625 1.90417 17.5875 2.2875 17.2042C2.67083 16.8208 3.29375 16.8208 3.62917 17.2042L4.875 18.45L8.0375 15.2875C8.42083 14.9042 8.99583 14.9042 9.37917 15.2875C9.7625 15.6708 9.7625 16.2458 9.37917 16.6292L5.54583 20.4625C5.35417 20.6542 5.11458 20.75 4.875 20.75Z"
+                                                    fill="#035A4B"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5 3C3.34315 3 2 4.34315 2 6V11.865C3.04486 11.3127 4.23591 11 5.5 11C9.47412 11 12.7263 14.091 12.9836 18H18.0249L20.3178 20.2929C20.9478 20.9229 22.0249 20.4767 22.0249 19.5858V15L22 15.0098L22 15V6C22 4.34315 20.6569 3 19 3H5ZM6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44771 9 6 9H15C15.5523 9 16 8.55228 16 8C16 7.44772 15.5523 7 15 7H6Z"
+                                                    fill="#035A4B"></path>
+                                            </svg>
+
+                                        </span>
+                                    </div>
+
+                                    <div class="flex-grow-1 ms-4">
+                                        <h6 class="text-white mb-0">92%</h6>
+                                        <p class="text-white-70">Satisfaction rate</p>
+                                    </div>
+                                </div>
+                                <!-- End Info Block -->
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Col -->
+
+                    <div class="col-md-8 col-lg-6">
+                        <div class="ps-lg-5">
+                            <!-- Card -->
+                            <div class="card card-lg">
+                                <div class="card-body">
+                                    <div class="row align-items-sm-center mb-5">
+                                        <div class="col-sm-auto order-sm-2 mb-3 mb-sm-0">
+                                            <img class="avatar avatar-xxl avatar-4x3"
+                                                src="https://placekitten.com/200/200" alt="Image Description">
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div class="col-sm">
+                                            <h5 class="card-title">Join Space</h5>
+                                            <p class="card-text">Hundreds of companies using Space to build their
+                                                business.</p>
+                                        </div>
+                                        <!-- End Col -->
+                                    </div>
+                                    <!-- End Row -->
+
+                                    <form>
+                                        <!-- Form -->
+                                        <div class="mb-4">
+                                            <label class="form-label" for="registerEmail">Your name</label>
+                                            <input type="text" class="form-control form-control-lg" name="name"
+                                                id="registerName" placeholder="Type your name"
+                                                aria-label="Type your name" required=""
+                                                data-msg="Please enter your name.">
+                                        </div>
+                                        <!-- End Form -->
+
+                                        <!-- Form -->
+                                        <div class="mb-4">
+                                            <label class="form-label" for="registerEmail">Your email</label>
+                                            <input type="email" class="form-control form-control-lg" name="email"
+                                                id="registerEmail" placeholder="example@site.com"
+                                                aria-label="example@site.com" required=""
+                                                data-msg="Please enter a valid email address.">
+                                        </div>
+                                        <!-- End Form -->
+
+                                        <div class="mb-4">
+                                            <label class="form-label" for="registerEmail">Company Size</label>
+
+                                            <div class="row">
+                                                <div class="col-sm mb-4 mb-sm-0">
+                                                    <!-- Form Check -->
+                                                    <label class="form-control form-control-lg" for="registerRadio1">
+                                                        <span class="form-check form-check-custom">
+                                                            <input type="radio" class="form-check-input"
+                                                                name="registerRadio" id="registerRadio1" checked="">
+                                                            <span class="form-check-label">1-10</span>
+                                                        </span>
+                                                    </label>
+                                                    <!-- End Form Check -->
+                                                </div>
+
+                                                <div class="col-sm">
+                                                    <!-- Form Check -->
+                                                    <label class="form-control form-control-lg" for="registerRadio2">
+                                                        <span class="form-check form-check-custom">
+                                                            <input type="radio" class="form-check-input"
+                                                                name="registerRadio" id="registerRadio2">
+                                                            <span class="form-check-label">More than 10</span>
+                                                        </span>
+                                                    </label>
+                                                    <!-- End Form Check -->
+                                                </div>
+                                            </div>
+                                            <!-- End Row -->
+                                        </div>
+
+                                        <div class="d-grid text-center">
+                                            <button type="submit" class="btn btn-primary btn-lg">Start your free 30-days
+                                                trial</button>
+                                            <span class="form-text">Need help? <a class="link"
+                                                    href="./page-help-center.html">Visit our Help Center <i
+                                                        class="bi-chevron-right small ms-1"></i></a></span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+
+
+                <!-- JS Implementing Plugins -->
+                <script src="./assets/js/vendor.min.js"></script>
+
+                <!-- JS Space -->
+                <script src="./assets/js/theme.min.js"></script>
+
+                <!-- JS Plugins Init. -->
+                <script>
+                    (function () {
+                        // INITIALIZATION OF MEGA MENU
+                        // =======================================================
+                        const megaMenu = new HSMegaMenu('.js-mega-menu', {
+                            desktop: {
+                                position: 'left'
+                            }
+                        }).init();
+
+
+                        // INITIALIZATION OF SHOW ANIMATIONS
+                        // =======================================================
+                        new HSShowAnimation('.js-animation-link')
+
+
+                        // INITIALIZATION OF BOOTSTRAP VALIDATION
+                        // =======================================================
+                        HSBsValidation.init('.js-validate', {
+                            onSubmit: data => {
+                                data.event.preventDefault()
+                                alert('Submited')
+                            }
+                        })
+
+
+                        // INITIALIZATION OF GO TO
+                        // =======================================================
+                        new HSGoTo('.js-go-to')
+
+
+                        // INITIALIZATION OF NAV SCROLLER
+                        // =======================================================
+                        new HsNavScroller('.js-nav-scroller')
+
+
+                        // INITIALIZATION OF TEXT ANIMATION (TYPING)
+                        // =======================================================
+                        const typed = HSCore.components.HSTyped.init('.js-typedjs')
+                    })()
+                </script>
+                <style type="text/css" data-typed-js-css="true">
+                    .typed-cursor {
+                        opacity: 1;
+                    }
+
+                    .typed-cursor.typed-cursor--blink {
+                        animation: typedjsBlink 0.7s infinite;
+                        -webkit-animation: typedjsBlink 0.7s infinite;
+                        animation: typedjsBlink 0.7s infinite;
+                    }
+
+                    @keyframes typedjsBlink {
+                        50% {
+                            opacity: 0.0;
+                        }
+                    }
+
+                    @-webkit-keyframes typedjsBlink {
+                        0% {
+                            opacity: 1;
+                        }
+
+                        50% {
+                            opacity: 0.0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                </style>
+
+
+</body>
+
+</html>
