@@ -12,8 +12,9 @@ const hae = function (event) {
                 console.log(sarja.show);
                 $("#tulos").append(`<article>
     <h2>${sarja.show.name}</h2>
-    <p>${sarja.show.genres}</p>
-    <a href="${sarja.show.officialSite ? sarja.show.officialSite : sarja.show.url
+    <p>Genre(s): ${sarja.show.genres}</p>
+    
+    <a class ="btn btn-dark" href="${sarja.show.officialSite ? sarja.show.officialSite : sarja.show.url
                     }">Linkki kotisivulle</a>
     <figure>
       <img src="${sarja.show.image ? sarja.show.image.medium : "tile.png"
