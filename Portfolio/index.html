@@ -28,7 +28,7 @@
     <header class="row">
       <nav class="navbar navbar-expand-lg navbar-light bg-light col">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">Johanneksen portfolio v0.1</a>
+          <a class="navbar-brand" href="">Johanneksen portfolio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -58,6 +58,7 @@
           </div>
         </div>
         <div class="row">
+          <h2>Tonin tehtävät</h2>
           <div class="col p-0">
             <div class="card col-sm-3" style="width: 15rem;">
               <img src="./img/vektori1.svg" class="card-img-top" alt="Mikki Hiiri">
@@ -65,7 +66,7 @@
                 <h5 class="card-title">Vektoripiirrustus</h5>
                 <p class="card-text">Olemme harjoitelleet vektoripiirtämistä bezier-käyrien avulla.</p>
                 <!-- Button trigger modal -->
-                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#vectorModal'>Open
+                <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#vectorModal'>Open
                   image</button>
 
                 <!-- Modal -->
@@ -88,13 +89,17 @@
           </div>
           <div class="col p-0">
             <div class="card col-sm-3" style="width: 15rem;">
-              <img src="http://placekitten.com/400/251" class="card-img-top" alt="Kissa2">
+              <video width="240" height="120" controls>
+                <source src="https://users.metropolia.fi/~johankap/dmp/Videoeditointi/Sprintti1/Videosprintti%20I.mp4"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Sed in scelerisque velit. Ut nec lectus mi. Pellentesque odio dolor, commodo ac
-                  diam ac, aliquet consequat urna. Integer mollis nibh mattis tellus rhoncus rhoncus.</p>
+                <h5 class="card-title">Videosprintti I</h5>
+                <p class="card-text">Tässä ensimmäinen videosprinttitehtävä, jossa opettelimme järjestelmäkameran
+                  käyttöä ja kuvasimme sillä materiaalia Metropolian Karamalmin kampuksen esittelyvideoa varten.</p>
                 <!-- Button trigger modal -->
-                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#kissa2Modal'>Open
+                <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#kissa2Modal'>Open
                   image</button>
 
                 <!-- Modal -->
@@ -118,12 +123,10 @@
             <div class="card col-sm-3" style="width: 15rem;">
               <img src="http://placekitten.com/400/252" class="card-img-top" alt="Kissa3">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Sed in scelerisque velit. Ut nec lectus mi. Pellentesque odio dolor, commodo ac
-                  diam ac, aliquet consequat urna. Integer mollis nibh mattis tellus rhoncus rhoncus. Fusce ornare mi
-                  ex, egestas convallis dolor tristique vel.</p>
+                <h5 class="card-title">Videosprintti II</h5>
+                <p class="card-text">Toinen videosprintti.</p>
                 <!-- Button trigger modal -->
-                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#kissa3Modal'>Open
+                <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#kissa3Modal'>Open
                   image</button>
 
                 <!-- Modal -->
@@ -146,11 +149,43 @@
         </div>
       </main>
       <aside class="bg-light col-sm-3 p-0">
-        <h2>Tästä pitäisi tehdä SinglePageApp.</h2>
-        <p>Kurssilla tehtyjä tehtäviä pitäisi ilmeisesti esitellä täällä jollain tavalla; card ja modal on varmaan ihan
-          hyviä. Vai tehtävät allekkain ja navbarista #animate scrollaus tiettyyn kohtaan? Kysy Ileltä
+        <h2>Tämä on Single Page App.</h2>
+        <p>Lisää tehtävät joko tai:
+          <br>
+          - allekkain ja laita navbariin #scroll-"linkit"
+          <br>
+          - esim. cardeihin joista modal -> iFrame
         </p>
       </aside>
+    </div>
+    <div class="row">
+      <h2>Ilkan tehtävät</h2>
+      <div class="col">
+        <div class="card col-sm-3" style="width: 15rem;">
+          <div class="card-body">
+            <h5 class="card-title">jQuery-tehtävät</h5>
+            <p class="card-text">Olemme harjoitelleet vektoripiirtämistä bezier-käyrien avulla.</p>
+            <!-- Button trigger modal -->
+            <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#vectorModal'>Open
+              image</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="vectorModal" tabindex="-1" aria-labelledby="Mikki Hiiri" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="vectorModal">Mikki Hiiri vektoripiirros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src='./img/vektori1.svg' class='card-img-top' alt="Mikki Hiiri">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
