@@ -78,20 +78,18 @@
                         </iframe>
                         </p>
                         <br>
-                        <p>Tehtävä 4:
-                          <iframe src="https://users.metropolia.fi/~johankap/dmp/jquerylabs/jquery4/ex4/ex4.html"
-                            title="jQuery-tehtävä 4" width="100%" height="300px">
-                          </iframe>
-                        </p>
-                        <br>
-                        <p>Tehtävä 5:
-                          <iframe src="https://users.metropolia.fi/~johankap/dmp/jquerylabs/jquery5/animate.html"
-                            title="jQuery-tehtävä 5" width="100%">
+                        <p>
+                        <h1>Tehtävä 2:</h1>
+                        <iframe src="https://users.metropolia.fi/~johankap/dmp/bootstrapLabs/TVMazeAPI/"
+                            title="Bootstrap-tehtävä 2" width="100%" height="500px">
                           </iframe>
                         </p>
                         <br>
                         <p>
-                          <a href="https://users.metropolia.fi/~johankap/dmp/bootstrapLabs/TVMazeAPI/">AJAX-tehtävä</a>
+                          <h1>Tehtävä 3, yritetty matkia Bootstrap-teemaa <a href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">"Space":</a></h1>
+                          <iframe src="http://127.0.0.1:5500/bootstrapLabs/BootstrapSCSS/testi.html"
+                            title="Bootstrap-tehtävä 2" width="100%" height="500px">
+                          </iframe>
                         </p>
                       </div>
                     </div>
